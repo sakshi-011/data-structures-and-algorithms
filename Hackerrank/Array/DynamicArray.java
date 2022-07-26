@@ -1,6 +1,7 @@
 package Hackerrank.Array;
 
-import java.util.*;
+import java.util.Scanner;
+import java.util.ArrayList;
 
 public class DynamicArray {
     public static void main(String[] args){
@@ -12,9 +13,9 @@ public class DynamicArray {
 	int i, idx;
 	
 	ArrayList<ArrayList<Integer>> arr = new ArrayList<>();
-        for (i = 0; i < n; i++) {
-            arr.add(new ArrayList<Integer>());
-        }
+    for (i = 0; i < n; i++) {
+        arr.add(new ArrayList<Integer>());
+    }
 	
 	for(i=0;i<q;i++){
 		int a = in.nextInt();
