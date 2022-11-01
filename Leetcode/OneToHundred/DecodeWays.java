@@ -3,7 +3,6 @@ package Leetcode.OneToHundred;
 import java.util.Scanner;
 
 public class DecodeWays {
-
     public static int numDecodings(String s){
         int n = s.length();
         int [] dp = new int[n];
