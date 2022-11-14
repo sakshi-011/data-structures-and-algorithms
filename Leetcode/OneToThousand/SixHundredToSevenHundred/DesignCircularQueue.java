@@ -1,4 +1,4 @@
-package Leetcode;
+package Leetcode.OneToThousand.SixHundredToSevenHundred;
 
 import java.util.Scanner;
 
