@@ -1,6 +1,9 @@
 package Leetcode.OneToThousand.TwoHundredToThreeHundred;
 
 public class FirstBadVersion {
+
+    //placeholder
+    public static boolean isBadVersion(int version){ return true;}
     public int firstBadVersion(int n) {
         int left = 1;
         int right = n;
