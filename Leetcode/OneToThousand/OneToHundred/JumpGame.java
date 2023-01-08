@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class JumpGame {
 
+    /* Not optimized
     public static boolean canJump(int[] nums) {
         boolean[] res = new boolean[nums.length];
         res[nums.length-1] = true;
@@ -16,6 +17,18 @@ public class JumpGame {
             }
         }
         return res[0];
+    }
+    */
+
+    public static boolean canJump(int[] nums) {
+        int max = 0;
+        for (int i = 0; i <= max; i++) {
+            max = Math.max(max,i+nums[i]);
+            if(max >= nums.length-1){
+                return true;
+            }
+        }
+        return false;
     }
 
     public static void main(String[] args) {
