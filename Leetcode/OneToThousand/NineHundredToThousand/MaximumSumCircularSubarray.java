@@ -1,0 +1,39 @@
+package Leetcode.OneToThousand.NineHundredToThousand;
+
+import java.util.Scanner;
+
+public class MaximumSumCircularSubarray {
+
+    public static int maxSubarraySumCircular(int[] nums) {
+        final int n = nums.length;
+        final int[] rightMax = new int[n];
+        rightMax[n - 1] = nums[n - 1];
+        for (int suffixSum = nums[n - 1], i = n - 2; i >= 0; --i) {
+            suffixSum += nums[i];
+            rightMax[i] = Math.max(rightMax[i + 1], suffixSum);
+        }
+        int maxSum = nums[0];
+        int specialSum = nums[0];
+        for (int i = 0, prefixSum = 0, curMax = 0; i < n; ++i) {
+            curMax = Math.max(curMax, 0) + nums[i];
+            maxSum = Math.max(maxSum, curMax);
+            prefixSum += nums[i];
+            if (i + 1 < n) {
+                specialSum = Math.max(specialSum, prefixSum + rightMax[i + 1]);
+            }
+        }
+        return Math.max(maxSum, specialSum);
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String s = in.next();
+        String[] str = s.replaceAll("\\[", "").replaceAll("]", "").split(",");
+        int[] nums = new int[str.length];
+        for (int i = 0; i < str.length; i++) {
+            nums[i] = Integer.valueOf(str[i]);
+        }
+        System.out.println(maxSubarraySumCircular(nums));
+    }
+
+}
