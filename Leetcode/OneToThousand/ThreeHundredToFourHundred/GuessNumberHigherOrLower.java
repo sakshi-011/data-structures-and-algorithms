@@ -13,6 +13,9 @@ public class GuessNumberHigherOrLower {
      * int guess(int num);
      */
 
+    public static int guess(int num){
+        return 0;
+    }
 
     /* Ternary Search
         public int guessNumber(int n) {
