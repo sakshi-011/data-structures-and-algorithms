@@ -1,35 +1,34 @@
 package Leetcode.OneToThousand.TwoHundredToThreeHundred;
 
 import java.util.Scanner;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Set;
+import java.util.HashSet;
 
 public class ContainsDuplicate2 {
 
     public static boolean containsNearbyDuplicate(int[] nums, int k){
-        if (k == 0) return false;
-
-        Map<Integer, Integer> hashMap = new HashMap<>();
-        for (int i = 0; i < nums.length; i++) {
-            int integer = nums[i];
-            if (hashMap.containsKey(integer) && i - hashMap.get(integer) <= k)
+        Set<Integer> set = new HashSet<>();
+        for(int i = 0; i < nums.length; i++){
+            if(set.contains(nums[i]))
                 return true;
-            hashMap.put(integer, i);
+            set.add(nums[i]);
+            if(i >= k){
+                set.remove(nums[i-k]);
+            }
         }
         return false;
     }
 
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
-        String s = in.nextLine();
+        String s = in.next();
         int k = in.nextInt();
 
-        String[] ar = s.split(",");
-        int[] nums = new int[ar.length];
-        for (int i = 0; i < ar.length; i++) {
-            nums[i] = Integer.parseInt(ar[i]);
+        String[] st = s.replaceAll("\\[","").replaceAll("]","").split(",");
+        int[] nums = new int[st.length];
+        for(int i = 0; i < st.length; i++){
+            nums[i] = Integer.parseInt(st[i]);
         }
-
         System.out.println(containsNearbyDuplicate(nums,k));
     }
 }
