@@ -1,4 +1,4 @@
-package Leetcode.OneThousandToTwoThousand;
+package Leetcode.OneThousandToTwoThousand.SixHundredToSevenHundred;
 
 import java.util.Scanner;
 public class ConcatenationOfConsecutiveBinaryNumbers {

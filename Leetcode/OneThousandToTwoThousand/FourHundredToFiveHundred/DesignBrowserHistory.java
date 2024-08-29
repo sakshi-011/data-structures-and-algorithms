@@ -1,4 +1,4 @@
-package Leetcode.OneThousandToTwoThousand;
+package Leetcode.OneThousandToTwoThousand.FourHundredToFiveHundred;
 
 public class DesignBrowserHistory {
 
