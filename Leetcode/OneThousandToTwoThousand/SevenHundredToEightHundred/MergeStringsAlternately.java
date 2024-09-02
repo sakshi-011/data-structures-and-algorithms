@@ -1,4 +1,4 @@
-package Leetcode.OneThousandToTwoThousand;
+package Leetcode.OneThousandToTwoThousand.SevenHundredToEightHundred;
 
 import java.util.Scanner;
 public class MergeStringsAlternately {

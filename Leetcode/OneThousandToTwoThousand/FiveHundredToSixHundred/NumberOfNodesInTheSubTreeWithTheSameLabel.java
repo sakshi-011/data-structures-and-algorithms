@@ -1,4 +1,4 @@
-package Leetcode.OneThousandToTwoThousand;
+package Leetcode.OneThousandToTwoThousand.FiveHundredToSixHundred;
 
 import java.util.ArrayList;
 import java.util.HashMap;
