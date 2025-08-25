@@ -8,7 +8,7 @@ public class DiagonalTraverse {
         if (mat == null || mat.length == 0) {
             return new int[0];
         }
-        int m = mat.length, n = mat[0].length;
+        int m = mat[0].length, n = mat.length;
         int row = 0, column = 0 , dir = 1, i =0;
         int[] ans = new int[m * n];
 
